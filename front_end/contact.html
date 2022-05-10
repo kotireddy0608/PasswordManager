@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Report an issue</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+   #filesub{
+       background-color:cadetblue;
+       border-radius: 6px;
+   }
+   .heading{
+    color:aliceblue;
+    padding-left:100px;
+   }
+   .text-group{
+    width: 50%;
+   }
+   .pad{
+   padding-top: 100px;
+   padding-left:500px;
+   
+   }
+   body{
+    background-color:slategray;
+   }
+  </style>
+</head>
+<body>
+ 
+    <div class="pad">
+        <div class="heading">
+        <h2><b>Report an issue</b></h2>
+        <br><br>
+        </div>
+<div class="text-group">
+    <label for="exampleFormControlTextarea1">Elaborate Your Problem</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" value="Explain your problem"></textarea>
+  </div>
+<form>
+    <div class="form-group">
+        <br>
+      <label for="exampleFormControlFile1"><b>Please Submit the proof of your problem</b></label>
+      <input type="file" class="form-control-file" id="filesub">
+    </div>
+  </form>
+  <div class="formup">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">All the details provided are true.</label>
+  </div>
+  <button type="submit" class="btn btn-success">Submit</button>
+  </div>
+  </body>
+  </html>
