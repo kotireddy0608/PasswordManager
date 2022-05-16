@@ -1,0 +1,16 @@
+{
+  "name": "packagemanager",
+  "version": "1.0.0",
+  "description": "a simple package manager project and the back end files to the corresponding website and api files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nikith Sai",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "jose": "^4.8.1",
+    "mongodb": "^4.6.0"
+  }
+}
