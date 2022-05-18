@@ -2,7 +2,7 @@
   "name": "packagemanager",
   "version": "1.0.0",
   "description": "a simple package manager project and the back end files to the corresponding website and api files",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
