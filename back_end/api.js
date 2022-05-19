@@ -50,8 +50,39 @@ router.post("/login" ,express.json(), async (req , res)=>{
 	
 	
 })
-router.post("/signup" ,express.json(), (req , res)=>{
-	console.log('signup request '+ req.body);
-	res.send(req.body);
+router.post("/signup" ,express.json(), async (req , res)=>{
+	//client side validation is required
+	/*
+	schema
+	username : string
+	password : string
+	Name : string
+	email : string
+	password_hint : string
+	password_hint_answer : string
+	*/
+	console.log(req.body);
+	if(req.body.username && req.body.password && req.body.Name && req.body.email && req.body.password_hint && req.body.password_hint_answer){
+		let db = (await client).db('passwordManager');
+		let users = db.collection('users');
+		let user = {
+			"username":req.body.username,
+			"password":crypto.createHash('sha256').update(req.body.password).digest('hex'),
+			"Name":req.body.Name,
+			"email":req.body.email,
+			"password_hint":req.body.password_hint,
+			"password_hint_answer":req.body.password_hint_answer
+		}
+		users.insertOne(user);
+		res.json({
+			"status":"success"
+		});
+	}else{
+		res.status(400).json(
+			{
+				"status":"rejected",
+				"message":"missing fields"
+			});
+	}
 })
 module.exports = router;
